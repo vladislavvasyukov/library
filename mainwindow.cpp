@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "addbook.h"
 #include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -14,11 +15,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_loginButton_clicked()
-{
-    ui->label->setText("You are successfully login!!!");
-}
-
 void MainWindow::on_showListBooks_clicked()
 {
     QMessageBox msgBox;
@@ -31,8 +27,23 @@ void MainWindow::on_showListBooks_clicked()
     int res = msgBox.exec();
     if (res == QMessageBox::Ok){
         QMessageBox::about(this, "OK", "You are reader");
-    } else {
-        QMessageBox::about(this, "BYE", "Goodbye, stupid");
-        QApplication::quit();
     }
+}
+
+void MainWindow::on_Quit_clicked()
+{
+
+    QMessageBox msgBox;
+    msgBox.setText("GoodBye");
+    msgBox.setInformativeText("We believe you will come again!!!");
+
+    msgBox.exec();
+    QApplication::quit();
+}
+
+void MainWindow::on_add_book_clicked()
+{
+    AddBook addbook;
+    addbook.setModal(true);
+    addbook.exec();
 }
