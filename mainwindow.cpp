@@ -32,12 +32,6 @@ void MainWindow::on_showListBooks_clicked()
 
 void MainWindow::on_Quit_clicked()
 {
-
-    QMessageBox msgBox;
-    msgBox.setText("GoodBye");
-    msgBox.setInformativeText("We believe you will come again!!!");
-
-    msgBox.exec();
     QApplication::quit();
 }
 
