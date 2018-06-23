@@ -34,7 +34,7 @@ void AddReader::on_addReaderButton_clicked()
 
     QSqlQuery query;
     query.prepare("INSERT INTO readers (firstname, lastname, birth_date, address)"
-             "VALUES (:author, :title, :isbn, :genre, :create_date)");
+             "VALUES (:firstname, :lastname, :birth_date, :address)");
     query.bindValue(":firstname", ui->firstname->text());
     query.bindValue(":lastname", ui->lastname->text());
     query.bindValue(":birth_date", ui->birth_date->text());
