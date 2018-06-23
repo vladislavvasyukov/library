@@ -20,21 +20,14 @@
       <x>560</x>
       <y>10</y>
       <width>164</width>
-      <height>241</height>
+      <height>281</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPushButton" name="showListBooks">
+      <widget class="QPushButton" name="switchBooksAndReaders">
        <property name="text">
         <string>Список книг</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>Список читателей</string>
        </property>
       </widget>
      </item>
@@ -49,6 +42,13 @@
       <widget class="QPushButton" name="add_book">
        <property name="text">
         <string>Добавить книгу в библиотеку</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="add_reader">
+       <property name="text">
+        <string>Добавить читателя</string>
        </property>
       </widget>
      </item>

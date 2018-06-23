@@ -20,7 +20,7 @@ void AddBook::on_add_book_in_library_clicked()
 {
     QMessageBox msgBox;
     msgBox.setText("Information");
-    msgBox.setInformativeText("Here you must make request to database");
+    msgBox.setInformativeText("Вы добавили книгу в библиотеку.");
     msgBox.setIcon(QMessageBox::Information);
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");

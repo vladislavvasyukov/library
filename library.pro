@@ -27,12 +27,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    addbook.cpp
+    addbook.cpp \
+    addreader.cpp
 
 HEADERS += \
         mainwindow.h \
-    addbook.h
+    addbook.h \
+    addreader.h
 
 FORMS += \
         mainwindow.ui \
-    addbook.ui
+    addbook.ui \
+    addreader.ui
