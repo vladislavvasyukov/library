@@ -3,7 +3,6 @@
 #include <QMessageBox>
 #include <QSqlDatabase>
 #include <QSqlQuery>
-#include <QDebug>
 
 AddBook::AddBook(QWidget *parent) :
     QDialog(parent),
@@ -19,33 +18,31 @@ AddBook::~AddBook()
 
 void AddBook::on_add_book_in_library_clicked()
 {
-    QDebug() << "Start working window";
     QMessageBox msgBox;
     msgBox.setText("Information");
     msgBox.setInformativeText("Here you must make request to database");
     msgBox.setIcon(QMessageBox::Information);
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:\my_projects\library.db");
+    db.setDatabaseName("C:\\my_projects\\library.db");
     bool isOpen = db.open();
-    QSqlQuery query;
-    query.exec("select id, lname from readers");
-    QString message = "";
-    while (query.next()){
-        message += query.value(0).toString();
-        message += query.value(1).toString();
-        ui->textEdit->insertPlainText(message+"\n");
-    }
 
+    QSqlQuery query;
+    query.prepare("INSERT INTO books (author, title, isbn, genre, create_date)"
+             "VALUES (:author, :title, :isbn, :genre, :create_date)");
+    query.bindValue(":author", ui->author->text());
+    query.bindValue(":title", ui->title->text());
+    query.bindValue(":isbn", ui->isbn->text());
+    query.bindValue(":genre", ui->genre->text());
+    query.bindValue(":create_date", ui->create_date->text());
+    query.exec();
 
     if (isOpen){
         int res = msgBox.exec();
         if (res == QMessageBox::Ok){
-            QDebug() << "End working window";
             this->close();
         }
     } else {
-        QDebug() << "End working window";
         this->close();
     }
 }
