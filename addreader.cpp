@@ -3,6 +3,7 @@
 #include <QMessageBox>
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QSqlTableModel>
 
 AddReader::AddReader(QWidget *parent) :
     QDialog(parent),

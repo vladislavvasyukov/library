@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSqlTableModel>
 
 namespace Ui {
 class MainWindow;
@@ -16,6 +17,8 @@ public:
     ~MainWindow();
 
 private slots:
+    void setupModel(const QString &tableName, const QStringList &headers);
+
     void on_Quit_clicked();
 
     void on_add_book_clicked();
@@ -26,6 +29,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QSqlTableModel  *model;
+    QSqlDatabase db;
 };
 
 #endif // MAINWINDOW_H
