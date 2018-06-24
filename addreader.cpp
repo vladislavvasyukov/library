@@ -34,12 +34,13 @@ void AddReader::on_addReaderButton_clicked()
     bool isOpen = db.open();
 
     QSqlQuery query;
-    query.prepare("INSERT INTO readers (firstname, lastname, birth_date, address)"
-             "VALUES (:firstname, :lastname, :birth_date, :address)");
+    query.prepare("INSERT INTO readers (firstname, lastname, birth_date, address, phone)"
+             "VALUES (:firstname, :lastname, :birth_date, :address, :phone)");
     query.bindValue(":firstname", ui->firstname->text());
     query.bindValue(":lastname", ui->lastname->text());
     query.bindValue(":birth_date", ui->birth_date->text());
     query.bindValue(":address", ui->address->text());
+    query.bindValue(":phone", ui->phone->text());
     query.exec();
 
     if (isOpen){

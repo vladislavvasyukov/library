@@ -20,35 +20,69 @@
       <x>560</x>
       <y>10</y>
       <width>164</width>
-      <height>281</height>
+      <height>301</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPushButton" name="switchBooksAndReaders">
+      <widget class="QPushButton" name="listOfBooks">
        <property name="text">
         <string>Список книг</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="listOfIssuedBooks">
        <property name="text">
-        <string>Выдать книгку на руки</string>
+        <string>Список выданных книг</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="add_book">
+      <widget class="QPushButton" name="listOfReaders">
        <property name="text">
-        <string>Добавить книгу в библиотеку</string>
+        <string>Список читателей</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="add_reader">
+      <widget class="QPushButton" name="issueBook">
+       <property name="text">
+        <string>Выдать книгу</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addBook">
+       <property name="text">
+        <string>Добавить книгу</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="takeBook">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Сдать книгу</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addReader">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="text">
         <string>Добавить читателя</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="deleteReader">
+       <property name="text">
+        <string>Удалить читателя</string>
        </property>
       </widget>
      </item>

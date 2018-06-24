@@ -43,33 +43,30 @@ void MainWindow::on_Quit_clicked()
     QApplication::quit();
 }
 
-void MainWindow::on_add_book_clicked()
+void MainWindow::on_listOfBooks_clicked()
+{
+    QStringList headersBooks = {"Автор", "Название", "ISBN", "Дата поступления", "Жанр"};
+    ui->tableView->setModel(0);
+    this->setupModel("books", headersBooks);
+}
+
+void MainWindow::on_listOfReaders_clicked()
+{
+    QStringList headersReaders = {"Имя", "Фамилия", "Дата рождения", "Адрес"};
+    ui->tableView->setModel(0);
+    this->setupModel("readers", headersReaders);
+}
+
+void MainWindow::on_addBook_clicked()
 {
     AddBook addbook;
     addbook.setModal(true);
     addbook.exec();
 }
 
-void MainWindow::on_add_reader_clicked()
+void MainWindow::on_addReader_clicked()
 {
     AddReader addreader;
     addreader.setModal(true);
     addreader.exec();
-}
-
-void MainWindow::on_switchBooksAndReaders_clicked()
-{
-    QStringList headersReaders = {"Имя", "Фамилия", "Дата рождения", "Адрес"};
-    QStringList headersBooks = {"Автор", "Название", "ISBN", "Дата поступления", "Жанр"};
-    QString lableButton = ui->switchBooksAndReaders->text();
-
-    ui->tableView->setModel(0);
-
-    if (lableButton == "Список книг") {
-        ui->switchBooksAndReaders->setText("Список читателей");
-        this->setupModel("books", headersBooks);
-    } else {
-        ui->switchBooksAndReaders->setText("Список книг");
-        this->setupModel("readers", headersReaders);
-    }
 }

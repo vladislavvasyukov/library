@@ -21,11 +21,13 @@ private slots:
 
     void on_Quit_clicked();
 
-    void on_add_book_clicked();
+    void on_listOfBooks_clicked();
 
-    void on_add_reader_clicked();
+    void on_listOfReaders_clicked();
 
-    void on_switchBooksAndReaders_clicked();
+    void on_addBook_clicked();
+
+    void on_addReader_clicked();
 
 private:
     Ui::MainWindow *ui;
