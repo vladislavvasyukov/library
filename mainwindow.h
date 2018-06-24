@@ -29,9 +29,12 @@ private slots:
 
     void on_addReader_clicked();
 
+    void on_listOfIssuedBooks_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlTableModel  *model;
+    QSqlQueryModel *compModel;
     QSqlDatabase db;
 };
 

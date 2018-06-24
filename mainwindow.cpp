@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     db.setDatabaseName("C:\\my_projects\\library.db");
 
     QString tableName = "readers";
-    QStringList headers = {"Имя", "Фамилия", "Дата рождения", "Адрес"};
+    QStringList headers = {"Имя", "Фамилия", "Дата рождения", "Адрес", "Телефон"};
     this->setupModel(tableName, headers);
 }
 
@@ -52,9 +52,28 @@ void MainWindow::on_listOfBooks_clicked()
 
 void MainWindow::on_listOfReaders_clicked()
 {
-    QStringList headersReaders = {"Имя", "Фамилия", "Дата рождения", "Адрес"};
+    QStringList headersReaders = {"Имя", "Фамилия", "Дата рождения", "Адрес", "Телефон"};
     ui->tableView->setModel(0);
     this->setupModel("readers", headersReaders);
+}
+
+void MainWindow::on_listOfIssuedBooks_clicked()
+{
+    QStringList headersIssuedBooks = {"Автор", "Название", "Имя", "Фамилия", "Дата выдачи", "Дата возврата"};
+    compModel = new QSqlQueryModel();
+
+    compModel->setQuery("select b.author, b.title, r.firstname, r.lastname, i.issued_date, i.return_date"
+                        "FROM books b INNER JOIN issued_books i"
+                        "ON b.id = i.book_id"
+                        "INNER JOIN readers r"
+                        "ON r.id = i.reader_id");
+
+    for (int i = 0; i < compModel->columnCount(); i++) {
+        model->setHeaderData(i, Qt::Horizontal, headersIssuedBooks[i]);
+    }
+
+    ui->tableView->setModel(0);
+    ui->tableView->setModel(compModel);
 }
 
 void MainWindow::on_addBook_clicked()
