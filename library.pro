@@ -28,14 +28,17 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     addbook.cpp \
-    addreader.cpp
+    addreader.cpp \
+    returnbook.cpp
 
 HEADERS += \
         mainwindow.h \
     addbook.h \
-    addreader.h
+    addreader.h \
+    returnbook.h
 
 FORMS += \
         mainwindow.ui \
     addbook.ui \
-    addreader.ui
+    addreader.ui \
+    returnbook.ui

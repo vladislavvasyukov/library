@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "addbook.h"
 #include "addreader.h"
+#include "returnbook.h"
 #include <QSqlDatabase>
 #include <QSqlTableModel>
 
@@ -61,6 +62,7 @@ void MainWindow::on_listOfIssuedBooks_clicked()
 {
     QStringList headersIssuedBooks = {"Автор", "Название", "Имя", "Фамилия", "Дата выдачи", "Дата возврата"};
     compModel = new QSqlQueryModel();
+//    QSqlQueryModel queryModel(QSqlDatabase::database("NAME_CONNECTION"));
 
     compModel->setQuery("select b.author, b.title, r.firstname, r.lastname, i.issued_date, i.return_date"
                         "FROM books b INNER JOIN issued_books i"
@@ -88,4 +90,11 @@ void MainWindow::on_addReader_clicked()
     AddReader addreader;
     addreader.setModal(true);
     addreader.exec();
+}
+
+void MainWindow::on_returnBook_clicked()
+{
+    returnBook returnBook;
+    returnBook.setModal(true);
+    returnBook.exec();
 }

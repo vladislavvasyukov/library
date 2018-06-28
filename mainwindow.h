@@ -31,6 +31,8 @@ private slots:
 
     void on_listOfIssuedBooks_clicked();
 
+    void on_returnBook_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlTableModel  *model;

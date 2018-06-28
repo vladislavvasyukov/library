@@ -60,7 +60,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="takeBook">
+      <widget class="QPushButton" name="returnBook">
        <property name="enabled">
         <bool>true</bool>
        </property>
