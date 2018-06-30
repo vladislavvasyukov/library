@@ -3,6 +3,7 @@
 #include "addbook.h"
 #include "addreader.h"
 #include "returnbook.h"
+#include "deletereader.h"
 #include <QSqlDatabase>
 #include <QSqlTableModel>
 
@@ -97,4 +98,11 @@ void MainWindow::on_returnBook_clicked()
     returnBook returnBook;
     returnBook.setModal(true);
     returnBook.exec();
+}
+
+void MainWindow::on_deleteReader_clicked()
+{
+    DeleteReader deletereader;
+    deletereader.setModal(true);
+    deletereader.exec();
 }

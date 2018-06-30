@@ -29,16 +29,19 @@ SOURCES += \
         mainwindow.cpp \
     addbook.cpp \
     addreader.cpp \
-    returnbook.cpp
+    returnbook.cpp \
+    deletereader.cpp
 
 HEADERS += \
         mainwindow.h \
     addbook.h \
     addreader.h \
-    returnbook.h
+    returnbook.h \
+    deletereader.h
 
 FORMS += \
         mainwindow.ui \
     addbook.ui \
     addreader.ui \
-    returnbook.ui
+    returnbook.ui \
+    deletereader.ui
