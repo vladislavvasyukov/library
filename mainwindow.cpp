@@ -4,6 +4,7 @@
 #include "addreader.h"
 #include "returnbook.h"
 #include "deletereader.h"
+#include "issuedbooks.h"
 #include <QSqlDatabase>
 #include <QSqlTableModel>
 
@@ -105,4 +106,11 @@ void MainWindow::on_deleteReader_clicked()
     DeleteReader deletereader;
     deletereader.setModal(true);
     deletereader.exec();
+}
+
+void MainWindow::on_issueBook_clicked()
+{
+    IssuedBooks issueBook;
+    issueBook.setModal(true);
+    issueBook.exec();
 }
