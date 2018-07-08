@@ -1,10 +1,10 @@
-#include "mainwindow.h"
+#include "main_window.h"
 #include "ui_mainwindow.h"
-#include "addbook.h"
-#include "addreader.h"
-#include "returnbook.h"
-#include "deletereader.h"
-#include "issuedbooks.h"
+#include "issuing_books/issue_books.h"
+#include "adding_book/add_book.h"
+#include "adding_reader/add_reader.h"
+#include "return_book/return_book.h"
+#include "deleting_reader/delete_reader.h"
 #include <QSqlDatabase>
 #include <QSqlTableModel>
 

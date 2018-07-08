@@ -1,4 +1,4 @@
-#include "deletereader.h"
+#include "delete_reader.h"
 #include "ui_deletereader.h"
 #include <QSqlDatabase>
 #include <QSqlTableModel>

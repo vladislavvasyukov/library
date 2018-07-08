@@ -1,4 +1,4 @@
-#include "addreader.h"
+#include "add_reader.h"
 #include "ui_addreader.h"
 #include <QMessageBox>
 #include <QSqlDatabase>

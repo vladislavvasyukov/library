@@ -26,25 +26,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow\mainwindow.cpp \
-    addbook\addbook.cpp \
-    addreader\addreader.cpp \
-    returnbook\returnbook.cpp \
-    deletereader\deletereader.cpp \
-    issuedbooks\issuedbooks.cpp
+    main_window\main_window.cpp \
+    adding_book\add_book.cpp \
+    adding_reader\add_reader.cpp \
+    return_book\return_book.cpp \
+    deleting_reader\delete_reader.cpp \
+    issuing_books\issue_books.cpp
 
 HEADERS += \
-    mainwindow\mainwindow.h \
-    addbook\addbook.h \
-    addreader\addreader.h \
-    returnbook\returnbook.h \
-    deletereader\deletereader.h \
-    issuedbooks\issuedbooks.h
+    main_window\main_window.h \
+    adding_book\add_book.h \
+    adding_reader\add_reader.h \
+    return_book\return_book.h \
+    deleting_reader\delete_reader.h \
+    issuing_books\issue_books.h
 
 FORMS += \
-    mainwindow\mainwindow.ui \
-    addbook\addbook.ui \
-    addreader\addreader.ui \
-    returnbook\returnbook.ui \
-    deletereader\deletereader.ui \
-    issuedbooks\issuedbooks.ui
+    main_window\main_window.ui \
+    adding_book\add_book.ui \
+    adding_reader\add_reader.ui \
+    return_book\return_book.ui \
+    deleting_reader\delete_reader.ui \
+    issuing_books\issue_books.ui
