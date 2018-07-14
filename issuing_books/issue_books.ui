@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>603</width>
-    <height>300</height>
+    <width>743</width>
+    <height>370</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,31 +16,31 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>330</x>
      <y>10</y>
      <width>91</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>ВЫДАЧА КНИГИ</string>
+    <string>ВЫДАЧА КНИГИ 2</string>
    </property>
   </widget>
-  <widget class="QTableView" name="tableView">
+  <widget class="QTableView" name="tableBooks">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>40</y>
+     <x>90</x>
+     <y>250</y>
      <width>541</width>
-     <height>192</height>
+     <height>81</height>
     </rect>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>240</y>
+     <x>220</x>
+     <y>340</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -52,14 +52,96 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>240</y>
+     <x>450</x>
+     <y>340</y>
      <width>75</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
     <string>Отмена</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableReaders">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>130</y>
+     <width>541</width>
+     <height>91</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>110</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Выберите читателя</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>230</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Выберите книгу</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>60</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Дата выдачи</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>80</y>
+     <width>42</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>60</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>На сколько дней выдать</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>80</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
    </property>
   </widget>
  </widget>
