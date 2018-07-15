@@ -1,5 +1,5 @@
 #include "add_reader.h"
-#include "ui_addreader.h"
+#include "ui_add_reader.h"
 #include <QMessageBox>
 #include <QSqlDatabase>
 #include <QSqlQuery>

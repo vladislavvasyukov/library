@@ -1,5 +1,5 @@
 #include "main_window.h"
-#include "ui_mainwindow.h"
+#include "ui_main_window.h"
 #include "issuing_books/issue_books.h"
 #include "adding_book/add_book.h"
 #include "adding_reader/add_reader.h"
