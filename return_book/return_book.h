@@ -15,6 +15,9 @@ public:
     explicit returnBook(QWidget *parent = 0);
     ~returnBook();
 
+private slots:
+    void on_pushButton_2_clicked();
+
 private:
     Ui::returnBook *ui;
 };

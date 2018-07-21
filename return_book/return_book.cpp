@@ -12,3 +12,8 @@ returnBook::~returnBook()
 {
     delete ui;
 }
+
+void returnBook::on_pushButton_2_clicked()
+{
+    this->close();
+}
