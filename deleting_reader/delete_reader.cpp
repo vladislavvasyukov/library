@@ -26,3 +26,8 @@ DeleteReader::~DeleteReader()
 {
     delete ui;
 }
+
+void DeleteReader::on_pushButton_2_clicked()
+{
+    this->close();
+}

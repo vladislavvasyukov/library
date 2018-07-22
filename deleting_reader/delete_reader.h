@@ -15,6 +15,9 @@ public:
     explicit DeleteReader(QWidget *parent = 0);
     ~DeleteReader();
 
+private slots:
+    void on_pushButton_2_clicked();
+
 private:
     Ui::DeleteReader *ui;
 };

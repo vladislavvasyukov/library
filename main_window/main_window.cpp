@@ -31,7 +31,6 @@ void MainWindow::setupModel(const QString &tableName, const QStringList &headers
     }
     model->select();
 
-    db.close();
     ui->tableView->setModel(model);
     ui->tableView->setColumnHidden(0, true);
 }
@@ -63,17 +62,17 @@ void MainWindow::on_listOfReaders_clicked()
 void MainWindow::on_listOfIssuedBooks_clicked()
 {
     QStringList headersIssuedBooks = {"Автор", "Название", "Имя", "Фамилия", "Дата выдачи", "Дата возврата"};
-    compModel = new QSqlQueryModel();
-//    QSqlQueryModel queryModel(QSqlDatabase::database("NAME_CONNECTION"));
 
-    compModel->setQuery("select b.author, b.title, r.firstname, r.lastname, i.issued_date, i.return_date"
-                        "FROM books b INNER JOIN issued_books i"
-                        "ON b.id = i.book_id"
-                        "INNER JOIN readers r"
+    compModel = new QSqlQueryModel();
+
+    compModel->setQuery("select b.author, b.title, r.firstname, r.lastname, i.issued_date, i.return_date "
+                        "FROM books b INNER JOIN issued_books i "
+                        "ON b.id = i.book_id "
+                        "INNER JOIN readers r "
                         "ON r.id = i.reader_id");
 
     for (int i = 0; i < compModel->columnCount(); i++) {
-        model->setHeaderData(i, Qt::Horizontal, headersIssuedBooks[i]);
+        compModel->setHeaderData(i, Qt::Horizontal, headersIssuedBooks[i]);
     }
 
     ui->tableView->setModel(0);
