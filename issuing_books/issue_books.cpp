@@ -1,6 +1,9 @@
 #include "issue_books.h"
 #include "ui_issue_books.h"
 #include <QSqlTableModel>
+#include "QDebug"
+#include "QDate"
+#include "QSqlQuery"
 
 IssuedBooks::IssuedBooks(QWidget *parent) :
     QDialog(parent),
@@ -45,5 +48,25 @@ void IssuedBooks::on_cancelButton_clicked()
 
 void IssuedBooks::on_pushButton_clicked()
 {
-    // There must be a code of issuing book
+    QModelIndex book = ui->tableBooks->currentIndex();
+    int book_id = ui->tableBooks->model()->data(ui->tableBooks->model()->index(book.row(), 0), 0).toInt();
+
+    QModelIndex reader = ui->tableReaders->currentIndex();
+    int reader_id = ui->tableBooks->model()->data(ui->tableReaders->model()->index(reader.row(), 0), 0).toInt();
+
+    QDate issued_date = ui->issue_date->date();
+    QDate return_date = issued_date.addDays(ui->count_days->value());
+
+    QSqlQuery query;
+    query.prepare("INSERT INTO issued_books(reader_id, book_id, issued_date, return_date, is_return)"
+                  "VALUES (:reader_id, :book_id, :issued_date, :return_date, :is_return)");
+
+    query.bindValue(":reader_id", reader_id);
+    query.bindValue(":book_id", book_id);
+    query.bindValue(":issued_date", issued_date.toString("yyyy-MM-dd"));
+    query.bindValue(":return_date", return_date.toString("yyyy-MM-dd"));
+    query.bindValue(":is_return", 0);
+
+    query.exec();
+    this->close();
 }

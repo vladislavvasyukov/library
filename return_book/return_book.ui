@@ -41,9 +41,16 @@
     <rect>
      <x>250</x>
      <y>320</y>
-     <width>75</width>
-     <height>23</height>
+     <width>120</width>
+     <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-decoration: none; 
+background-color: #3175b0;
+font-size: 14px;
+border-radius: 5px;</string>
    </property>
    <property name="text">
     <string>Сдать</string>
@@ -54,9 +61,16 @@
     <rect>
      <x>420</x>
      <y>320</y>
-     <width>75</width>
+     <width>120</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-decoration: none; 
+background-color: #3175b0;
+font-size: 14px;
+border-radius: 5px;</string>
    </property>
    <property name="text">
     <string>Отмена</string>

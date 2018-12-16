@@ -6,6 +6,7 @@
 #include "return_book/return_book.h"
 #include "deleting_reader/delete_reader.h"
 #include <QSqlDatabase>
+#include "QDebug"
 #include <QSqlTableModel>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -19,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QString tableName = "readers";
     QStringList headers = {"Имя", "Фамилия", "Дата рождения", "Адрес", "Телефон"};
     this->setupModel(tableName, headers);
+    ui->main_title->setText("Список читателей");
 }
 
 void MainWindow::setupModel(const QString &tableName, const QStringList &headers)
@@ -49,6 +51,7 @@ void MainWindow::on_listOfBooks_clicked()
 {
     QStringList headersBooks = {"Автор", "Название", "ISBN", "Дата поступления", "Жанр"};
     ui->tableView->setModel(0);
+    ui->main_title->setText("Список книг");
     this->setupModel("books", headersBooks);
 }
 
@@ -56,7 +59,9 @@ void MainWindow::on_listOfReaders_clicked()
 {
     QStringList headersReaders = {"Имя", "Фамилия", "Дата рождения", "Адрес", "Телефон"};
     ui->tableView->setModel(0);
+    ui->main_title->setText("Список читателей");
     this->setupModel("readers", headersReaders);
+    qDebug() << 'This is adding bok';
 }
 
 void MainWindow::on_listOfIssuedBooks_clicked()
@@ -65,7 +70,7 @@ void MainWindow::on_listOfIssuedBooks_clicked()
 
     compModel = new QSqlQueryModel();
 
-    compModel->setQuery("select b.author, b.title, r.firstname, r.lastname, i.issued_date, i.return_date "
+    compModel->setQuery("select distinct b.author, b.title, r.firstname, r.lastname, i.issued_date, i.return_date "
                         "FROM books b INNER JOIN issued_books i "
                         "ON b.id = i.book_id "
                         "INNER JOIN readers r "
@@ -77,6 +82,7 @@ void MainWindow::on_listOfIssuedBooks_clicked()
 
     ui->tableView->setModel(0);
     ui->tableView->setModel(compModel);
+    ui->main_title->setText("Список выданных книг");
 }
 
 void MainWindow::on_addBook_clicked()

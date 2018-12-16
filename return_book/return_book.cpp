@@ -32,6 +32,7 @@ returnBook::~returnBook()
 
 void returnBook::on_pushButton_2_clicked()
 {
+    qDebug() << 'This is adding book';
     this->close();
 }
 void returnBook::on_pushButton_clicked()

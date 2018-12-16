@@ -60,6 +60,13 @@
      <height>23</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-decoration: none; 
+background-color: #3175b0;
+font-size: 14px;
+border-radius: 5px;</string>
+   </property>
    <property name="text">
     <string>Выдать</string>
    </property>
@@ -72,6 +79,13 @@
      <width>80</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-decoration: none; 
+background-color: #3175b0;
+font-size: 14px;
+border-radius: 5px;</string>
    </property>
    <property name="text">
     <string>Отмена</string>
@@ -126,7 +140,7 @@
     <string>Дата выдачи</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox">
+  <widget class="QSpinBox" name="count_days">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -149,7 +163,7 @@
     <string>На сколько дней выдать</string>
    </property>
   </widget>
-  <widget class="QDateEdit" name="dateEdit">
+  <widget class="QDateEdit" name="issue_date">
    <property name="geometry">
     <rect>
      <x>240</x>
