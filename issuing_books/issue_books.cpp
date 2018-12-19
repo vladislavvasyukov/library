@@ -58,14 +58,13 @@ void IssuedBooks::on_pushButton_clicked()
     QDate return_date = issued_date.addDays(ui->count_days->value());
 
     QSqlQuery query;
-    query.prepare("INSERT INTO issued_books(reader_id, book_id, issued_date, return_date, is_return)"
-                  "VALUES (:reader_id, :book_id, :issued_date, :return_date, :is_return)");
+    query.prepare("INSERT INTO issued_books(reader_id, book_id, issued_date, return_date)"
+                  "VALUES (:reader_id, :book_id, :issued_date, :return_date)");
 
     query.bindValue(":reader_id", reader_id);
     query.bindValue(":book_id", book_id);
     query.bindValue(":issued_date", issued_date.toString("yyyy-MM-dd"));
     query.bindValue(":return_date", return_date.toString("yyyy-MM-dd"));
-    query.bindValue(":is_return", 0);
 
     query.exec();
     this->close();
