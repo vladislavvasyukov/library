@@ -24,8 +24,17 @@
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>5</number>
+     </property>
      <item>
       <widget class="QPushButton" name="listOfBooks">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: #fff;
 text-decoration: none; 
@@ -40,6 +49,9 @@ border-radius: 5px;</string>
      </item>
      <item>
       <widget class="QPushButton" name="listOfIssuedBooks">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: #fff;
 text-decoration: none; 
@@ -54,6 +66,9 @@ border-radius: 5px;</string>
      </item>
      <item>
       <widget class="QPushButton" name="listOfReaders">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: #fff;
 text-decoration: none; 
@@ -68,6 +83,9 @@ border-radius: 5px;</string>
      </item>
      <item>
       <widget class="QPushButton" name="issueBook">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: #fff;
 text-decoration: none; 
@@ -82,6 +100,9 @@ border-radius: 5px;</string>
      </item>
      <item>
       <widget class="QPushButton" name="addBook">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: #fff;
 text-decoration: none; 
@@ -98,6 +119,9 @@ border-radius: 5px;</string>
       <widget class="QPushButton" name="returnBook">
        <property name="enabled">
         <bool>true</bool>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">color: #fff;
@@ -116,6 +140,9 @@ border-radius: 5px;</string>
        <property name="enabled">
         <bool>true</bool>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: #fff;
 text-decoration: none; 
@@ -130,6 +157,9 @@ border-radius: 5px;</string>
      </item>
      <item>
       <widget class="QPushButton" name="deleteReader">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: #fff;
 text-decoration: none; 
@@ -144,6 +174,9 @@ border-radius: 5px;</string>
      </item>
      <item>
       <widget class="QPushButton" name="Quit">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: #fff;
 text-decoration: none; 

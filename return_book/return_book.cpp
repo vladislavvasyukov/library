@@ -22,6 +22,7 @@ returnBook::returnBook(QWidget *parent) :
     for (int i = 1; i < compModel->columnCount(); i++) {
         compModel->setHeaderData(i, Qt::Horizontal, headersIssuedBooks[i-1]);
     }
+    qDebug() << "";
     ui->tableView->setModel(0);
     ui->tableView->setModel(compModel);
     ui->tableView->setColumnHidden(0, true);

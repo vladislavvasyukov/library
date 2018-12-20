@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("C:\\my_projects\\library.db");
-
+    qDebug() << "";
     QString tableName = "readers";
     QStringList headers = {"Имя", "Фамилия", "Дата рождения", "Адрес", "Телефон"};
     this->setupModel(tableName, headers);

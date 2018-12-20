@@ -18,7 +18,7 @@ DeleteReader::DeleteReader(QWidget *parent) :
         model->setHeaderData(i, Qt::Horizontal, headers[i-1]);
     }
     model->select();
-
+    qDebug() << "";
     ui->tableView->setModel(model);
     ui->tableView->setColumnHidden(0, true);
 }

@@ -19,6 +19,7 @@ IssuedBooks::IssuedBooks(QWidget *parent) :
     QStringList headersReaders = {"Имя", "Фамилия", "Дата рождения", "Адрес", "Телефон"};
     tableName = "readers";
     view = ui->tableReaders;
+    qDebug() << "";
     this->setupModel(tableName, headersReaders, view);
 }
 

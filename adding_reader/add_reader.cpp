@@ -43,8 +43,7 @@ void AddReader::on_addReaderButton_clicked()
     query.bindValue(":address", ui->address->text());
     query.bindValue(":phone", ui->phone->text());
     query.exec();
-
-    qDebug() << 'This is adding book';
+    qDebug() << "nn";
 
     if (isOpen){
         int res = msgBox.exec();

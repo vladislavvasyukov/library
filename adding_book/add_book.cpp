@@ -27,7 +27,6 @@ void AddBook::on_add_book_in_library_clicked()
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("C:\\my_projects\\library.db");
     bool isOpen = db.open();
-
     qDebug() << 'This is adding book';
 
     QSqlQuery query;
@@ -53,5 +52,6 @@ void AddBook::on_add_book_in_library_clicked()
 
 void AddBook::on_cancel_additing_book_clicked()
 {
+    qDebug() << "Youpush cancel button v2.0";
     this->close();
 }
