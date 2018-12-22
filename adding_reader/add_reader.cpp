@@ -1,7 +1,6 @@
 #include "add_reader.h"
 #include "ui_add_reader.h"
 #include <QMessageBox>
-#include "QDebug"
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlTableModel>
@@ -43,7 +42,6 @@ void AddReader::on_addReaderButton_clicked()
     query.bindValue(":address", ui->address->text());
     query.bindValue(":phone", ui->phone->text());
     query.exec();
-    qDebug() << "nn";
 
     if (isOpen){
         int res = msgBox.exec();

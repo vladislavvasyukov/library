@@ -1,7 +1,6 @@
 #include "delete_reader.h"
 #include "ui_delete_reader.h"
 #include <QSqlDatabase>
-#include "QDebug"
 #include <QSqlTableModel>
 
 DeleteReader::DeleteReader(QWidget *parent) :
@@ -18,7 +17,7 @@ DeleteReader::DeleteReader(QWidget *parent) :
         model->setHeaderData(i, Qt::Horizontal, headers[i-1]);
     }
     model->select();
-    qDebug() << "";
+
     ui->tableView->setModel(model);
     ui->tableView->setColumnHidden(0, true);
 }
@@ -30,6 +29,5 @@ DeleteReader::~DeleteReader()
 
 void DeleteReader::on_pushButton_2_clicked()
 {
-    qDebug() << 'This is adding book';
     this->close();
 }

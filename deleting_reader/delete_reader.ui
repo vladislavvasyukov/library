@@ -11,7 +11,40 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string/>
+   <string>Maktaba</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#deleteReaderButton {
+	color: #fff;
+	text-decoration: none; 
+	background-color: rgb(49, 117, 176);
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+#deleteReaderButton:hover {
+	background-color: rgb(65, 158, 234);
+}
+
+#deleteReaderButton:pressed {
+	background-color: rgb(26, 64, 95);
+}
+
+#pushButton_2 {
+	color: #fff;
+	text-decoration: none; 
+	background-color: rgb(49, 117, 176);
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+#pushButton_2:hover {
+	background-color: rgb(65, 158, 234);
+}
+
+#pushButton_2:pressed {
+	background-color: rgb(26, 64, 95);
+}</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -41,19 +74,15 @@
     <rect>
      <x>130</x>
      <y>270</y>
-     <width>75</width>
-     <height>23</height>
+     <width>100</width>
+     <height>25</height>
     </rect>
    </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Удалить</string>
@@ -64,19 +93,15 @@ border-radius: 5px;</string>
     <rect>
      <x>350</x>
      <y>270</y>
-     <width>75</width>
-     <height>23</height>
+     <width>100</width>
+     <height>25</height>
     </rect>
    </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Отмена</string>

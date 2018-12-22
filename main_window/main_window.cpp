@@ -6,7 +6,6 @@
 #include "return_book/return_book.h"
 #include "deleting_reader/delete_reader.h"
 #include <QSqlDatabase>
-#include "QDebug"
 #include <QSqlTableModel>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -16,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("C:\\my_projects\\library.db");
-    qDebug() << "";
+
     QString tableName = "readers";
     QStringList headers = {"Имя", "Фамилия", "Дата рождения", "Адрес", "Телефон"};
     this->setupModel(tableName, headers);
@@ -61,7 +60,6 @@ void MainWindow::on_listOfReaders_clicked()
     ui->tableView->setModel(0);
     ui->main_title->setText("Список читателей");
     this->setupModel("readers", headersReaders);
-    qDebug() << 'This is adding bok';
 }
 
 void MainWindow::on_listOfIssuedBooks_clicked()
@@ -69,7 +67,6 @@ void MainWindow::on_listOfIssuedBooks_clicked()
     QStringList headersIssuedBooks = {"Автор", "Название", "Имя", "Фамилия", "Дата выдачи", "Дата возврата"};
 
     compModel = new QSqlQueryModel();
-
     compModel->setQuery("select distinct b.author, b.title, r.firstname, r.lastname, i.issued_date, i.return_date "
                         "FROM books b INNER JOIN issued_books i "
                         "ON b.id = i.book_id "

@@ -11,33 +11,55 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string/>
+   <string>Maktaba</string>
   </property>
   <property name="styleSheet">
    <string notr="true">#cancel_additing_book {
-	background-color: #3175b0;
+	color: #fff;
+	text-decoration: none; 
+	background-color: rgb(49, 117, 176);
+	font-size: 14px;
+	border-radius: 5px;
 }
-</string>
+
+#cancel_additing_book:hover {
+	background-color: rgb(65, 158, 234);
+}
+
+#cancel_additing_book:pressed {
+	background-color: rgb(26, 64, 95);
+}
+
+#add_book_in_library {
+	color: #fff;
+	text-decoration: none; 
+	background-color: rgb(49, 117, 176);
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+#add_book_in_library:hover {
+	background-color: rgb(65, 158, 234);
+}
+
+#add_book_in_library:pressed {
+	background-color: rgb(26, 64, 95);
+}</string>
   </property>
   <widget class="QPushButton" name="add_book_in_library">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>290</y>
-     <width>75</width>
-     <height>23</height>
+     <x>100</x>
+     <y>300</y>
+     <width>100</width>
+     <height>25</height>
     </rect>
    </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;
-</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Добавить</string>
@@ -46,21 +68,17 @@ border-radius: 5px;
   <widget class="QPushButton" name="cancel_additing_book">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>290</y>
-     <width>75</width>
-     <height>23</height>
+     <x>280</x>
+     <y>300</y>
+     <width>100</width>
+     <height>25</height>
     </rect>
    </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: #fff;
-text-decoration: none; 
-
-font-size: 14px;
-border-radius: 5px;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Отмена</string>
@@ -72,7 +90,7 @@ border-radius: 5px;</string>
      <x>80</x>
      <y>50</y>
      <width>311</width>
-     <height>221</height>
+     <height>237</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout_2">

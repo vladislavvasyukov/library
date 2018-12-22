@@ -1,7 +1,6 @@
 #include "issue_books.h"
 #include "ui_issue_books.h"
 #include <QSqlTableModel>
-#include "QDebug"
 #include "QDate"
 #include "QSqlQuery"
 
@@ -19,7 +18,6 @@ IssuedBooks::IssuedBooks(QWidget *parent) :
     QStringList headersReaders = {"Имя", "Фамилия", "Дата рождения", "Адрес", "Телефон"};
     tableName = "readers";
     view = ui->tableReaders;
-    qDebug() << "";
     this->setupModel(tableName, headersReaders, view);
 }
 

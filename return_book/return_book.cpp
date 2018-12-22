@@ -2,7 +2,6 @@
 #include "ui_return_book.h"
 #include <QSqlQueryModel>
 #include "QSqlQuery"
-#include <QDebug>
 
 returnBook::returnBook(QWidget *parent) :
     QDialog(parent),
@@ -12,7 +11,6 @@ returnBook::returnBook(QWidget *parent) :
     QStringList headersIssuedBooks = {"Автор", "Название", "Имя", "Фамилия", "Дата выдачи", "Дата возврата"};
 
     QSqlQueryModel *compModel = new QSqlQueryModel();
-
     compModel->setQuery("SELECT DISTINCT b.id, b.author, b.title, r.firstname, r.lastname, i.issued_date, i.return_date "
                         "FROM books b INNER JOIN issued_books i "
                         "ON b.id = i.book_id "
@@ -22,7 +20,7 @@ returnBook::returnBook(QWidget *parent) :
     for (int i = 1; i < compModel->columnCount(); i++) {
         compModel->setHeaderData(i, Qt::Horizontal, headersIssuedBooks[i-1]);
     }
-    qDebug() << "";
+
     ui->tableView->setModel(0);
     ui->tableView->setModel(compModel);
     ui->tableView->setColumnHidden(0, true);
@@ -41,7 +39,7 @@ void returnBook::on_pushButton_clicked()
 {
     QModelIndex book  = ui->tableView->currentIndex();
     int book_id = ui->tableView->model()->data(ui->tableView->model()->index(book.row(),0),0).toInt();
-    qDebug() << book_id;
+
     QSqlQuery query;
     query.prepare("DELETE FROM issued_books WHERE book_id=:book_id");
     query.bindValue(":book_id", book_id);

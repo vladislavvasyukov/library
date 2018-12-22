@@ -7,197 +7,62 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>500</height>
+    <height>514</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Maktaba</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#listOfBooks,
+#listOfIssuedBooks,
+#listOfReaders,
+#issueBook,
+#addBook,
+#returnBook,
+#addReader,
+#deleteReader,
+#Quit {
+	color: #fff;
+	text-decoration: none; 
+	background-color: rgb(49, 117, 176);
+	font-size: 13px;
+	font-bold: 700;
+	border-radius: 5px;
+}
+
+#listOfBooks:hover,
+#listOfIssuedBooks:hover,
+#listOfReaders:hover,
+#issueBook:hover,
+#addBook:hover,
+#returnBook:hover,
+#addReader:hover,
+#deleteReader:hover,
+#Quit:hover {
+	background-color: rgb(65, 158, 234);
+}
+
+#listOfBooks:pressed,
+#listOfIssuedBooks:pressed,
+#listOfReaders:pressed,
+#issueBook:pressed,
+#addBook:pressed,
+#returnBook:pressed,
+#addReader:pressed,
+#deleteReader:pressed,
+#Quit:pressed {
+	background-color: rgb(26, 64, 95);
+}</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>630</x>
-      <y>10</y>
-      <width>164</width>
-      <height>431</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="spacing">
-      <number>5</number>
-     </property>
-     <item>
-      <widget class="QPushButton" name="listOfBooks">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
-       </property>
-       <property name="text">
-        <string>Список книг</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="listOfIssuedBooks">
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
-       </property>
-       <property name="text">
-        <string>Список выданных книг</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="listOfReaders">
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
-       </property>
-       <property name="text">
-        <string>Список читателей</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="issueBook">
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
-       </property>
-       <property name="text">
-        <string>Выдать книгу</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="addBook">
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
-       </property>
-       <property name="text">
-        <string>Добавить книгу</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="returnBook">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
-       </property>
-       <property name="text">
-        <string>Сдать книгу</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="addReader">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
-       </property>
-       <property name="text">
-        <string>Добавить читателя</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="deleteReader">
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
-       </property>
-       <property name="text">
-        <string>Удалить читателя</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="Quit">
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
-       </property>
-       <property name="text">
-        <string>Выход</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>40</y>
+      <y>30</y>
       <width>601</width>
-      <height>411</height>
+      <height>421</height>
      </rect>
     </property>
    </widget>
@@ -216,6 +81,187 @@ font-weight: 900;</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="listOfBooks">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>30</y>
+      <width>120</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Список книг</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="listOfIssuedBooks">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>80</y>
+      <width>120</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Выданные книги</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="listOfReaders">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>130</y>
+      <width>120</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Список читателей</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="issueBook">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>180</y>
+      <width>120</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Выдать книгу</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addBook">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>230</y>
+      <width>120</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Добавить книгу</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="returnBook">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>280</y>
+      <width>120</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+</string>
+    </property>
+    <property name="text">
+     <string>Сдать книгу</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addReader">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>330</y>
+      <width>120</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Добавить читателя</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deleteReader">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>380</y>
+      <width>120</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Удалить читателя</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Quit">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>430</y>
+      <width>120</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Выход</string>
     </property>
    </widget>
   </widget>

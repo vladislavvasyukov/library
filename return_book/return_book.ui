@@ -11,16 +11,40 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string/>
+   <string>Maktaba</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#pushButton,
+#pushButton_2 {
+	color: #fff;
+	text-decoration: none; 
+	background-color: rgb(49, 117, 176);
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+#pushButton:hover,
+#pushButton_2:hover {
+	background-color: rgb(65, 158, 234);
+}
+
+#pushButton:pressed,
+#pushButton_2:pressed {
+	background-color: rgb(26, 64, 95);
+}</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>320</x>
      <y>20</y>
-     <width>91</width>
+     <width>121</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 14px;
+font-weight: 900;</string>
    </property>
    <property name="text">
     <string>ВОЗВРАТ КНИГИ</string>
@@ -46,11 +70,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Сдать</string>
@@ -66,11 +86,7 @@ border-radius: 5px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: #fff;
-text-decoration: none; 
-background-color: #3175b0;
-font-size: 14px;
-border-radius: 5px;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Отмена</string>
