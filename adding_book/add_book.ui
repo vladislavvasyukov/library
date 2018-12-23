@@ -14,22 +14,7 @@
    <string>Maktaba</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#cancel_additing_book {
-	color: #fff;
-	text-decoration: none; 
-	background-color: rgb(49, 117, 176);
-	font-size: 14px;
-	border-radius: 5px;
-}
-
-#cancel_additing_book:hover {
-	background-color: rgb(65, 158, 234);
-}
-
-#cancel_additing_book:pressed {
-	background-color: rgb(26, 64, 95);
-}
-
+   <string notr="true">#cancel_additing_book,
 #add_book_in_library {
 	color: #fff;
 	text-decoration: none; 
@@ -38,12 +23,35 @@
 	border-radius: 5px;
 }
 
+#cancel_additing_book:hover,
 #add_book_in_library:hover {
 	background-color: rgb(65, 158, 234);
 }
 
+#cancel_additing_book:pressed,
 #add_book_in_library:pressed {
 	background-color: rgb(26, 64, 95);
+}
+
+#author,
+#title,
+#genre,
+#create_date,
+#isbn {
+	font-size: 14px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #fff;
+	border-radius: 8px;
+}
+
+#author_label,
+#genre_label,
+#title_book_lable,
+#date_writing_label,
+#isbn_label {
+	font-size: 12px;
+	font-weight: 900;
 }</string>
   </property>
   <widget class="QPushButton" name="add_book_in_library">
@@ -103,8 +111,7 @@
     <item row="0" column="0">
      <widget class="QLabel" name="author_label">
       <property name="styleSheet">
-       <string notr="true">font-size: 12px;
-font-weight: 900;</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Имя автора</string>
@@ -114,19 +121,14 @@ font-weight: 900;</string>
     <item row="0" column="1">
      <widget class="QLineEdit" name="author">
       <property name="styleSheet">
-       <string notr="true">font-size: 14px;
-padding: 6px 0 4px 10px;
-border: 1px solid #cecece;
-background: #fff;
-border-radius: 8px;</string>
+       <string notr="true"/>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
      <widget class="QLabel" name="title_book_lable">
       <property name="styleSheet">
-       <string notr="true">font-size: 12px;
-font-weight: 900;</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Название</string>
@@ -136,19 +138,14 @@ font-weight: 900;</string>
     <item row="1" column="1">
      <widget class="QLineEdit" name="title">
       <property name="styleSheet">
-       <string notr="true">font-size: 14px;
-padding: 6px 0 4px 10px;
-border: 1px solid #cecece;
-background: #fff;
-border-radius: 8px;</string>
+       <string notr="true"/>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="genre_label">
       <property name="styleSheet">
-       <string notr="true">font-size: 12px;
-font-weight: 900;</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Жанр</string>
@@ -158,19 +155,14 @@ font-weight: 900;</string>
     <item row="2" column="1">
      <widget class="QLineEdit" name="genre">
       <property name="styleSheet">
-       <string notr="true">font-size: 14px;
-padding: 6px 0 4px 10px;
-border: 1px solid #cecece;
-background: #fff;
-border-radius: 8px;</string>
+       <string notr="true"/>
       </property>
      </widget>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="date_writing_label">
       <property name="styleSheet">
-       <string notr="true">font-size: 12px;
-font-weight: 900;</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Дата поступления</string>
@@ -180,8 +172,7 @@ font-weight: 900;</string>
     <item row="4" column="0">
      <widget class="QLabel" name="isbn_label">
       <property name="styleSheet">
-       <string notr="true">font-size: 12px;
-font-weight: 900;</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>ISBN</string>
@@ -191,22 +182,14 @@ font-weight: 900;</string>
     <item row="4" column="1">
      <widget class="QLineEdit" name="isbn">
       <property name="styleSheet">
-       <string notr="true">font-size: 14px;
-padding: 6px 0 4px 10px;
-border: 1px solid #cecece;
-background: #fff;
-border-radius: 8px;</string>
+       <string notr="true"/>
       </property>
      </widget>
     </item>
     <item row="3" column="1">
      <widget class="QDateEdit" name="create_date">
       <property name="styleSheet">
-       <string notr="true">font-size: 14px;
-padding: 6px 0 4px 10px;
-border: 1px solid #cecece;
-background: #fff;
-border-radius: 8px;</string>
+       <string notr="true"/>
       </property>
      </widget>
     </item>

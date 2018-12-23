@@ -14,22 +14,7 @@
    <string>Maktaba</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#deleteReaderButton {
-	color: #fff;
-	text-decoration: none; 
-	background-color: rgb(49, 117, 176);
-	font-size: 14px;
-	border-radius: 5px;
-}
-
-#deleteReaderButton:hover {
-	background-color: rgb(65, 158, 234);
-}
-
-#deleteReaderButton:pressed {
-	background-color: rgb(26, 64, 95);
-}
-
+   <string notr="true">#deleteReaderButton,
 #pushButton_2 {
 	color: #fff;
 	text-decoration: none; 
@@ -38,22 +23,29 @@
 	border-radius: 5px;
 }
 
+#deleteReaderButton:hover,
 #pushButton_2:hover {
 	background-color: rgb(65, 158, 234);
 }
 
+#deleteReaderButton:pressed,
 #pushButton_2:pressed {
 	background-color: rgb(26, 64, 95);
-}</string>
+}
+</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>20</y>
-     <width>111</width>
+     <x>230</x>
+     <y>10</y>
+     <width>171</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 14px;
+font-weight: 900;</string>
    </property>
    <property name="text">
     <string>УДАЛЕНИЕ ЧИТАТЕЛЯ</string>
