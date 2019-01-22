@@ -5,6 +5,7 @@
 #include "adding_reader/add_reader.h"
 #include "return_book/return_book.h"
 #include "deleting_reader/delete_reader.h"
+#include "delete_book/delete_book.h"
 #include <QSqlDatabase>
 #include <QSqlTableModel>
 
@@ -64,7 +65,9 @@ void MainWindow::on_listOfReaders_clicked()
 
 void MainWindow::on_listOfIssuedBooks_clicked()
 {
-    QStringList headersIssuedBooks = {"Автор", "Название", "Имя", "Фамилия", "Дата выдачи", "Дата возврата"};
+    QStringList headersIssuedBooks = {
+        "Автор", "Название", "Имя", "Фамилия", "Дата выдачи", "Дата возврата"
+    };
 
     compModel = new QSqlQueryModel();
     compModel->setQuery("select distinct b.author, b.title, r.firstname, r.lastname, i.issued_date, i.return_date "
@@ -98,9 +101,9 @@ void MainWindow::on_addReader_clicked()
 
 void MainWindow::on_returnBook_clicked()
 {
-    returnBook returnBook;
-    returnBook.setModal(true);
-    returnBook.exec();
+    returnBook return_book;
+    return_book.setModal(true);
+    return_book.exec();
 }
 
 void MainWindow::on_deleteReader_clicked()
@@ -115,4 +118,11 @@ void MainWindow::on_issueBook_clicked()
     IssuedBooks issueBook;
     issueBook.setModal(true);
     issueBook.exec();
+}
+
+void MainWindow::on_deleteBook_clicked()
+{
+    deleteBook delete_book;
+    delete_book.setModal(true);
+    delete_book.exec();
 }

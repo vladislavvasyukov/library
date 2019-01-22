@@ -31,7 +31,8 @@ SOURCES += \
     adding_reader\add_reader.cpp \
     return_book\return_book.cpp \
     deleting_reader\delete_reader.cpp \
-    issuing_books\issue_books.cpp
+    issuing_books\issue_books.cpp \
+    delete_book\delete_book.cpp
 
 HEADERS += \
     main_window\main_window.h \
@@ -39,7 +40,8 @@ HEADERS += \
     adding_reader\add_reader.h \
     return_book\return_book.h \
     deleting_reader\delete_reader.h \
-    issuing_books\issue_books.h
+    issuing_books\issue_books.h \
+    delete_book\delete_book.h
 
 FORMS += \
     main_window\main_window.ui \
@@ -47,4 +49,5 @@ FORMS += \
     adding_reader\add_reader.ui \
     return_book\return_book.ui \
     deleting_reader\delete_reader.ui \
-    issuing_books\issue_books.ui
+    issuing_books\issue_books.ui \
+    delete_book\delete_book.ui

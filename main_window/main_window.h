@@ -37,6 +37,8 @@ private slots:
 
     void on_issueBook_clicked();
 
+    void on_deleteBook_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlTableModel  *model;
